@@ -53,6 +53,11 @@ local mappings = {["<leader>"] = {
 		w = { ":Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 		c = { ":TroubleClose<cr>", "Close Diagnostics" },
 	},
+	 g = { name = "GitSigns",																													     -- Gitsigns Bindings
+		h = { ":Gitsigns prev_hunk<cr>", "Prev Hunk" },
+		p = { ":Gitsigns preview_hunk<cr>", "Preview Hunk" },
+		b = { ":Gitsigns blame_line<cr>", "Blame Line" },
+	},
 },
 }
 --	{["<leader>"] = {

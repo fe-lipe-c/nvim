@@ -6,7 +6,7 @@ if not status_ok then
 end
 
     -- Setup highlights before calling setup()
-vim.cmd[[ highlight GitSignsAdd    guifg=#9de0ec ]]
+vim.cmd[[ highlight GitSignsAdd    guifg=#ace2ff ]]
 vim.cmd[[ highlight GitSignsChange guifg=red ]]
 vim.cmd[[ highlight GitSignsDelete guifg=red ]]
 
@@ -14,10 +14,11 @@ gitsigns.setup {
   signs = {
     add          = {hl = 'GitSignsAdd'   , text = '', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
     change       = {hl = 'GitSignsChange', text = '', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-    delete       = {hl = 'GitSignsDelete', text = '', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+    delete       = {hl = 'GitSignsDelete', text = '', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
     topdelete    = {hl = 'GitSignsDelete', text = '', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-    changedelete = {hl = 'GitSignsChange', text = '', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+    changedelete = {hl = 'GitSignsChange', text = '', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
   },
+	keymaps = {},
   signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
   numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
   linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
