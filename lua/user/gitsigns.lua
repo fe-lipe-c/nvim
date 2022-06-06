@@ -6,9 +6,9 @@ if not status_ok then
 end
 
     -- Setup highlights before calling setup()
-vim.cmd[[ highlight GitSignsAdd    guifg=#ace2ff ]]
-vim.cmd[[ highlight GitSignsChange guifg=red ]]
-vim.cmd[[ highlight GitSignsDelete guifg=red ]]
+vim.cmd[[ highlight GitSignsAdd    guifg=#76ff7a ]]    -- #ace2ff
+vim.cmd[[ highlight GitSignsChange guifg=#ff8c00 ]]
+vim.cmd[[ highlight GitSignsDelete guifg=#d7141e ]]
 
 gitsigns.setup {
   signs = {
