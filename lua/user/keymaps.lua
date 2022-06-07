@@ -70,9 +70,13 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Felipe 
 --
 keymap("n", "<C-s>", ":w<CR>", opts)
+keymap("v", "<C-s>", ":w<CR>", opts)
+keymap("n", "<C-q>", ":q<CR>", opts)
+keymap("v", "<C-q>", ":q<CR>", opts)
 
 vim.cmd("xnoremap <silent> <leader>jr :<C-u>MagmaEvaluateVisual<CR>")
 keymap("n", "<Bslash>", "$", { noremap = false, silent = true })
+keymap("v", "<Bslash>", "$", { noremap = false, silent = true })
 
 -- I swapped <ESC> with CapsLock using the following command in the terminal:
 -- setxkbmap -option caps:swapescape
