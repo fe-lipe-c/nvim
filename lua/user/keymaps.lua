@@ -72,3 +72,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 vim.cmd("xnoremap <silent> <leader>jr :<C-u>MagmaEvaluateVisual<CR>")
+keymap("n", "<Bslash>", "$", { noremap = false, silent = true })
+
+-- I swapped <ESC> with CapsLock using the following command in the terminal:
+-- setxkbmap -option caps:swapescape
+-- With this I can use CapsL to exit the active mode (as well pop-ups)
+
