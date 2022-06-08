@@ -19,9 +19,10 @@ local diagnostics = {
 
 local diff = {
 	"diff",
-	colored = false,
-	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-  cond = hide_in_width
+	colored = true,
+	symbols = { added = "+", modified = "~", removed = "-" }, -- changes diff symbols
+  -- cond = hide_in_width
+	diff_color = {added = 'DiffAdd',modified = 'DiffChange', removed  = 'DiffDelete'},
 }
 
 local mode = {
@@ -33,8 +34,7 @@ local mode = {
 
 local filetype = {
 	"filetype",
-	icons_enabled = false,
-	icon = nil,
+	icons_enabled = true,
 }
 
 local branch = {
@@ -46,6 +46,11 @@ local branch = {
 local location = {
 	"location",
 	padding = 0,
+}
+local filename = {
+	"filename",
+	--file_status = true,
+	path=1
 }
 
 -- cool function for progress
@@ -72,19 +77,19 @@ lualine.setup({
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { branch, diagnostics },
-		lualine_b = { mode },
-		lualine_c = {},
+		lualine_a = { mode, branch, diff},
+		lualine_b = {  location  },
+		lualine_c = { filename},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { diff, spaces, "encoding", filetype },
-		lualine_y = { location },
+		lualine_x = { filetype },
+		lualine_y = { diagnostics },
 		lualine_z = { progress },
 	},
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = { "filename" },
-		lualine_x = { "location" },
+		lualine_c = {},
+		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {},
 	},

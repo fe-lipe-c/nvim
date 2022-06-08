@@ -53,7 +53,6 @@ keymap("v", ">", ">gv",opts)
 -- Move Text Up and Down
 keymap("v", "<A-j>", ":move '>+1<CR>gv-gv",opts)
 keymap("v", "<A-k>", ":move '<-2<CR>gv-gv",opts)
-keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
 -- Move text up and down
@@ -78,7 +77,12 @@ vim.cmd("xnoremap <silent> <leader>jr :<C-u>MagmaEvaluateVisual<CR>")
 keymap("n", "<Bslash>", "$", { noremap = false, silent = true })
 keymap("v", "<Bslash>", "$", { noremap = false, silent = true })
 
+keymap("n", ";", ":", opts)
 -- I swapped <ESC> with CapsLock using the following command in the terminal:
 -- setxkbmap -option caps:swapescape
 -- With this I can use CapsL to exit the active mode (as well pop-ups)
 
+keymap("v", "p", '"_dP', opts)
+
+-- when changing do not yank
+keymap("n", "c", '"_c', opts)
