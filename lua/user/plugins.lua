@@ -59,7 +59,7 @@ return packer.startup(function(use)
 	use({ "dccsillag/magma-nvim", run = "UpdateRemotePlugins" }) --, requires = 'rcarriga/nvim-notify' }                -- jupyter notebook
 	use("lukas-reineke/indent-blankline.nvim")
 	use("wellle/context.vim")
-	--use "github/copilot.vim"
+	use("github/copilot.vim")
 	use({
 		"numToStr/Comment.nvim",
 		config = function()
