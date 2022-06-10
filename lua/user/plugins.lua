@@ -60,6 +60,7 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	use("wellle/context.vim")
 	use("github/copilot.vim")
+	use("hrsh7th/cmp-copilot")
 	use({
 		"numToStr/Comment.nvim",
 		config = function()
