@@ -25,7 +25,20 @@ pyright_opts = vim.tbl_deep_extend("force", pyright_opts, opts)
 lspconfig.pyright.setup({ pyright_opts })
 -- pyright --
 
-local servers = { "sumneko_lua", "pyright", "tsserver" }
+-- -- ltex-ls --
+-- local ltex_opts = require("user.lsp.settings.ltex")
+-- ltex_opts = vim.tbl_deep_extend("force", ltex_opts, opts)
+-- lspconfig.ltex.setup({ ltex_opts })
+-- -- ltex-ls --
+--
+--
+-- marksman --
+local marksman_opts = require("user.lsp.settings.marksman")
+marksman_opts = vim.tbl_deep_extend("force", marksman_opts, opts)
+lspconfig.marksman.setup({ marksman_opts })
+-- marksman --
+
+local servers = { "sumneko_lua", "pyright", "tsserver", "marksman" }
 
 for _, lsp_server in ipairs(servers) do
 	lspconfig[lsp_server].setup({})

@@ -52,7 +52,7 @@ return packer.startup(function(use)
 	use("rktjmp/lush.nvim") -- a colorscheme creation aid
 	use("folke/lua-dev.nvim")
 	use("folke/which-key.nvim")
-	use("vimwiki/vimwiki")
+	-- use("vimwiki/vimwiki")
 	use("preservim/nerdtree")
 	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("rcarriga/nvim-notify")
