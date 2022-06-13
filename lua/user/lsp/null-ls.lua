@@ -16,7 +16,7 @@ null_ls.setup({
 		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.black, --.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-		formatting.mdformat,
+		--formatting.mdformat, -- this was behaving weirdly, putting a backslash before "\" and "_" in math mode
 		--formatting.markdownlint,
 		diagnostics.flake8,
 		code_actions.gitsigns,
