@@ -19,6 +19,9 @@ null_ls.setup({
 		--formatting.mdformat, -- this was behaving weirdly, putting a backslash before "\" and "_" in math mode
 		--formatting.markdownlint,
 		diagnostics.flake8,
+		--diagnostics.pylint,
+		diagnostics.pydocstyle,
+		diagnostics.mypy,
 		code_actions.gitsigns,
 		--diagnostics.textlint,
 	},

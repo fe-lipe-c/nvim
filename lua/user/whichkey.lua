@@ -47,8 +47,9 @@ local mappings = {
 			c = { "<cmd>HopChar1<CR>", "Character" },
 			k = { "<cmd>HopChar2<CR>", "Character w/ a bigram" },
 		},
-		q = { "<cmd>HopWord<CR>", "Hop to Word" }, -- Hop Bindings
+		w = { "<cmd>HopWord<CR>", "Hop to Word" }, -- Hop Bindings
 		p = { "<cmd>HopChar1<CR>", "Hop to Character" }, -- Hop Bindings
+		c = { "<cmd>HopChar2<CR>", "Hop to 2Character" }, -- Hop Bindings
 		d = {
 			name = "Definition", -- Definition Bindings
 			d = { "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", "Definition" },
