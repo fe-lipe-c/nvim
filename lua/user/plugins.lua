@@ -91,7 +91,7 @@ return packer.startup(function(use)
 		end,
 	})
 	use("karb94/neoscroll.nvim")
-	use("wakatime/vim-wakatime")
+	-- use("wakatime/vim-wakatime")
 	use("windwp/nvim-autopairs")
 	-- General --
 
