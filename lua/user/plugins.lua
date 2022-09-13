@@ -52,7 +52,7 @@ return packer.startup(function(use)
 	use("rktjmp/lush.nvim") -- a colorscheme creation aid
 	use("folke/lua-dev.nvim")
 	use("folke/which-key.nvim")
-	-- use("vimwiki/vimwiki")
+	use("vimwiki/vimwiki")
 	use("preservim/nerdtree")
 	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("rcarriga/nvim-notify")
@@ -93,6 +93,8 @@ return packer.startup(function(use)
 	use("karb94/neoscroll.nvim")
 	-- use("wakatime/vim-wakatime")
 	use("windwp/nvim-autopairs")
+	use("OmniSharp/omnisharp-vim")
+	use("mattn/calendar-vim")
 	-- General --
 
 	-- Snippets --

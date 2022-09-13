@@ -40,16 +40,16 @@ local mappings = {
 		--z = { "<cmd>z<CR>", "z" },
 		--g = { "<cmd>g<CR>", "g" },
 		--},
-		h = {
-			name = "Hop To", -- Hop Bindings
-			w = { "<cmd>HopWord<CR>", "Word" },
-			l = { "<cmd>HopLine<CR>", "Line" },
-			c = { "<cmd>HopChar1<CR>", "Character" },
-			k = { "<cmd>HopChar2<CR>", "Character w/ a bigram" },
-		},
-		w = { "<cmd>HopWord<CR>", "Hop to Word" }, -- Hop Bindings
+		-- h = {
+		-- 	name = "Hop To", -- Hop Bindings
+		-- 	w = { "<cmd>HopWord<CR>", "Word" },
+		-- 	l = { "<cmd>HopLine<CR>", "Line" },
+		-- 	c = { "<cmd>HopChar1<CR>", "Character" },
+		-- 	k = { "<cmd>HopChar2<CR>", "Character w/ a bigram" },
+		-- },
+		h = { "<cmd>HopWord<CR>", "Hop to Word" }, -- Hop Bindings
 		p = { "<cmd>HopChar1<CR>", "Hop to Character" }, -- Hop Bindings
-		c = { "<cmd>HopChar2<CR>", "Hop to 2Character" }, -- Hop Bindings
+		k = { "<cmd>HopChar2<CR>", "Hop to 2Character" }, -- Hop Bindings
 		d = {
 			name = "Definition", -- Definition Bindings
 			d = { "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", "Definition" },
@@ -70,6 +70,7 @@ local mappings = {
 			b = { ":Gitsigns blame_line<cr>", "Blame Line" },
 		},
 		r = { "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", "Format" },
+		c = { "<cmd>Calendar<cr>", "Calendar" },
 	},
 }
 
