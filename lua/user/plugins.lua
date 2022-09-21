@@ -46,7 +46,13 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- an implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- useful lua functions used ny lots of plugins
 	--use "dense-analysis/ale"
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }) -- Markdown preview
+	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }) -- Markdown preview
+-- 	use({
+--     "iamcco/markdown-preview.nvim",
+--     run = function() vim.fn["mkdp#util#install"]() end,
+-- })
+	
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 	use("andymass/vim-matchup")
 	use("norcalli/nvim-colorizer.lua")
 	use("rktjmp/lush.nvim") -- a colorscheme creation aid
@@ -116,7 +122,7 @@ return packer.startup(function(use)
 	-- use "lunarvim/colorschemes"          			-- A collection of colorschemes
 	-- use "joshdick/onedark.vim"
 	use("projekt0n/github-nvim-theme")
-	use("/home/felipe/nvim/colorscheme/lipcs") -- a custom color scheme
+	use("/home/felipe/Documents/nvim/colorscheme/lipcs") -- a custom color scheme
 	-- Colorschemes --
 
 	-- LSP --
