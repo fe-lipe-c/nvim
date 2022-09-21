@@ -71,6 +71,7 @@ local mappings = {
 		},
 		r = { "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", "Format" },
 		c = { "<cmd>Calendar<cr>", "Calendar" },
+		m = { "<cmd>MarkdownPreview<cr>", "Markdown Preview" },
 	},
 }
 
