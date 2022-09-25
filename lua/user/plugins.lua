@@ -101,6 +101,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("OmniSharp/omnisharp-vim")
 	use("mattn/calendar-vim")
+	use("lervag/vimtex")
 	-- General --
 
 	-- Snippets --
