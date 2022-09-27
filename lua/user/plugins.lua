@@ -102,6 +102,7 @@ return packer.startup(function(use)
 	use("OmniSharp/omnisharp-vim")
 	use("mattn/calendar-vim")
 	use("lervag/vimtex")
+	use("wesleimp/stylua.nvim")
 	-- General --
 
 	-- Snippets --
