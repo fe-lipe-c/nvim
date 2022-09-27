@@ -217,73 +217,73 @@ ls.add_snippets("all", {
 })
 
 
-ls.add_snippets("vimwiki", {
-	s("ah", {
-		t({ "á"}),
-	}),
-}, {
-	key = "vimwiki",
-})
-
-
-ls.add_snippets("vimwiki", {
-	s("hah", {
-		t({ "à"}),
-	}),
-}, {
-	key = "vimwiki",
-})
-
-ls.add_snippets("vimwiki", {
-	s("eh", {
-		t({ "é"}),
-	}),
-}, {
-	key = "vimwiki",
-})
-
-ls.add_snippets("vimwiki", {
-	s("ih", {
-		t({ "í"}),
-	}),
-}, {
-	key = "vimwiki",
-})
-
-
--- Markdown Math Snippets
-
-ls.add_snippets("vimwiki", {
-	s("sif", {
-		t({ "$"}),
-	}),
-
-	s("int", {
-	t('\\int'),
-  t('_{'),
-  i(1, { 'Lower' }),
-  t('}'),
-  t('^{'),
-  i(2, { 'Upper' }),
-  t({ '}', '\t' }),
-  i(3,""),
-	}),
-
-	s("ceci", {
-		t({ "ç"}),
-	}),
-
-	s("uh", {
-		t({ "ú"}),
-	}),
-
-	s("oh", {
-		t({ "ó"}),
-	}),
-
-}, {
-	key = "vimwiki",
-})
+-- ls.add_snippets("vimwiki", {
+-- 	s("ah", {
+-- 		t({ "á"}),
+-- 	}),
+-- }, {
+-- 	key = "vimwiki",
+-- })
+--
+--
+-- ls.add_snippets("vimwiki", {
+-- 	s("hah", {
+-- 		t({ "à"}),
+-- 	}),
+-- }, {
+-- 	key = "vimwiki",
+-- })
+--
+-- ls.add_snippets("vimwiki", {
+-- 	s("eh", {
+-- 		t({ "é"}),
+-- 	}),
+-- }, {
+-- 	key = "vimwiki",
+-- })
+--
+-- ls.add_snippets("vimwiki", {
+-- 	s("ih", {
+-- 		t({ "í"}),
+-- 	}),
+-- }, {
+-- 	key = "vimwiki",
+-- })
+--
+--
+-- -- Markdown Math Snippets
+--
+-- ls.add_snippets("vimwiki", {
+-- 	s("sif", {
+-- 		t({ "$"}),
+-- 	}),
+--
+-- 	s("int", {
+-- 	t('\\int'),
+--   t('_{'),
+--   i(1, { 'Lower' }),
+--   t('}'),
+--   t('^{'),
+--   i(2, { 'Upper' }),
+--   t({ '}', '\t' }),
+--   i(3,""),
+-- 	}),
+--
+-- 	s("ceci", {
+-- 		t({ "ç"}),
+-- 	}),
+--
+-- 	s("uh", {
+-- 		t({ "ú"}),
+-- 	}),
+--
+-- 	s("oh", {
+-- 		t({ "ó"}),
+-- 	}),
+--
+-- }, {
+-- 	key = "vimwiki",
+-- })
 
 --
 
