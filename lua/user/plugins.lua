@@ -107,7 +107,8 @@ return packer.startup(function(use)
 
 	-- Snippets --
 	use("L3MON4D3/LuaSnip") -- snippet engine
-	use("rafamadriz/friendly-snippets") -- a bunch of snippets
+	use("fe-lipe-git/friendly-snippets") 
+	-- use("rafamadriz/friendly-snippets") -- a bunch of snippets
 	-- Snippets --
 
 	-- cmp plugins --
