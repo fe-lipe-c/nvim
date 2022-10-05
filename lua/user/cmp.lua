@@ -59,7 +59,7 @@ cmp.setup({
 		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-		["<Space>"] = cmp.mapping({
+		["<M-e>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}), --<C-e>
@@ -102,10 +102,10 @@ cmp.setup({
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
 			vim_item.menu = ({
+				luasnip = "[Snippet]",
 				nvim_lsp = "[LSP]",
 				copilot = "[Copilot]",
 				nvim_lua = "[NVIM_LUA]",
-				luasnip = "[Snippet]",
 				buffer = "[Buffer]",
 				path = "[Path]",
 			})[entry.source.name]
@@ -113,10 +113,10 @@ cmp.setup({
 		end,
 	},
 	sources = {
+		{ name = "luasnip" }, -- Snippet completion
 		{ name = "nvim_lsp" }, -- LSP completion
 		{ name = "copilot" }, -- LSP completion
 		{ name = "nvim_lua" },
-		{ name = "luasnip" }, -- Snippet completion
 		{ name = "buffer" }, -- Buffer Completion
 		{ name = "path" }, -- Path Completion
 	},
