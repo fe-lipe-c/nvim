@@ -33,6 +33,7 @@ local mappings = {
 			s = { "<cmd>MagmaSave<CR>", "Save" },
 			q = { "<cmd>MagmaLoad<CR>", "Load" },
 			o = { "<cmd>MagmaShowOutput<CR>", "Show Output" },
+			e = {"<cmd>noautocmd MagmaEnterOutput<CR>","Enter Output"}
 		},
 		--m = { name = "Key Bindings",																										-- Key Bindings
 		--r = { "<cmd>WhichKey \"<CR>", "\" Registers" },

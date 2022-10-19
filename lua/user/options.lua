@@ -10,7 +10,7 @@ local options = {
 	number = true, -- set numbered lines
 	-- expandtab = false,														-- convert tabs to spaces
 	relativenumber = true, -- set relative numbered lines
-	scrolloff = 18, -- centers the screen
+	scrolloff = 10, -- centers the screen
 	sidescrolloff = 8, -- centers the screen
 	shiftwidth = 2,
 	showtabline = 2, -- always show tabs
@@ -39,6 +39,7 @@ vim.cmd([[set iskeyword+=-]]) -- characters connected by "-" are treated as one 
 require("colorizer").setup()
 vim.cmd("let g:vimwiki_list = [{'auto_diary_index':1}]")
 vim.cmd("let g:magma_automatically_open_output = v:false")
+vim.cmd("let g:magma_wrap_output = v:false")
 vim.notify = require("notify")
 
 local id = vim.api.nvim_create_augroup("highlight_yank", {})
