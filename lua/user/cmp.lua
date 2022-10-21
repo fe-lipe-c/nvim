@@ -82,8 +82,11 @@ cmp.setup({
 			"i",
 			"s",
 		}),
+      --   cmp.select_prev_item()
+      -- elseif luasnip.jumpable(-1) then
+        -- luasnip.jump(-1)
 		["<C-Space>"] = cmp.mapping(function(fallback)
-			if luasnip.expand_or_jumpable() then 
+			if luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump()
 			elseif check_backspace() then
 				fallback()
