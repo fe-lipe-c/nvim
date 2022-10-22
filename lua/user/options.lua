@@ -40,7 +40,6 @@ require("colorizer").setup()
 vim.cmd("let g:vimwiki_list = [{'auto_diary_index':1}]")
 vim.cmd("let g:magma_automatically_open_output = v:false")
 vim.cmd("let g:magma_wrap_output = v:false")
-vim.notify = require("notify")
 
 local id = vim.api.nvim_create_augroup("highlight_yank", {})
 vim.api.nvim_create_autocmd("TextYankPost", {

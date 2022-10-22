@@ -47,16 +47,23 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- useful lua functions used ny lots of plugins
 	--use "dense-analysis/ale"
 	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }) -- Markdown preview
--- 	use({
---     "iamcco/markdown-preview.nvim",
---     run = function() vim.fn["mkdp#util#install"]() end,
--- })
-	
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+	-- 	use({
+	--     "iamcco/markdown-preview.nvim",
+	--     run = function() vim.fn["mkdp#util#install"]() end,
+	-- })
+
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
 	use("andymass/vim-matchup")
 	use("norcalli/nvim-colorizer.lua")
 	use("rktjmp/lush.nvim") -- a colorscheme creation aid
-	use("folke/lua-dev.nvim")
+	use("folke/neodev.nvim")
 	use("folke/which-key.nvim")
 	use("vimwiki/vimwiki")
 	use("preservim/nerdtree")
@@ -107,7 +114,7 @@ return packer.startup(function(use)
 
 	-- Snippets --
 	use("L3MON4D3/LuaSnip") -- snippet engine
-	use("fe-lipe-git/friendly-snippets") 
+	use("fe-lipe-git/friendly-snippets")
 	-- use("rafamadriz/friendly-snippets") -- a bunch of snippets
 	-- Snippets --
 
@@ -125,7 +132,7 @@ return packer.startup(function(use)
 	-- use "lunarvim/colorschemes"          			-- A collection of colorschemes
 	-- use "joshdick/onedark.vim"
 	use("projekt0n/github-nvim-theme")
-	use("/home/felipe/Documents/nvim/colorscheme/lipcs") -- a custom color scheme
+	use("/home/felipe/nvim/colorscheme/lipcs") -- a custom color scheme
 	-- Colorschemes --
 
 	-- LSP --

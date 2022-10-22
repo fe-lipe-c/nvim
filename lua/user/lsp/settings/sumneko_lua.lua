@@ -17,7 +17,7 @@ local opts = {
 	},
 }
 
-local lua_dev_loaded, lua_dev = pcall(require, "lua-dev")
+local lua_dev_loaded, lua_dev = pcall(require, "neodev")
 if not lua_dev_loaded then
 	return opts
 end
