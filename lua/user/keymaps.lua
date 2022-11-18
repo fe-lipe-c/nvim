@@ -16,6 +16,7 @@ vim.g.maplocalleader = " "
 -- 			term_mode = "t"
 -- 			command_mode = "c"
 
+vim.cmd("let g:context_add_mappings = 0")
 -- Normal --
 -- Better Window Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)

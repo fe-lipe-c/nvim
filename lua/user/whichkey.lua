@@ -33,7 +33,8 @@ local mappings = {
 			s = { "<cmd>MagmaSave<CR>", "Save" },
 			q = { "<cmd>MagmaLoad<CR>", "Load" },
 			o = { "<cmd>MagmaShowOutput<CR>", "Show Output" },
-			e = {"<cmd>noautocmd MagmaEnterOutput<CR>","Enter Output"}
+			e = {"<cmd>noautocmd MagmaEnterOutput<CR>","Enter Output"},
+			a = {"<cmd>lua require'swenv.api'.pick_venv()<CR>","Enviroments"}
 		},
 		--m = { name = "Key Bindings",																										-- Key Bindings
 		--r = { "<cmd>WhichKey \"<CR>", "\" Registers" },
@@ -51,14 +52,28 @@ local mappings = {
 		h = { "<cmd>HopWord<CR>", "Hop to Word" }, -- Hop Bindings
 		p = { "<cmd>HopChar1<CR>", "Hop to Character" }, -- Hop Bindings
 		k = { "<cmd>HopChar2<CR>", "Hop to 2Character" }, -- Hop Bindings
+		-- d = {
+		-- 	name = "Definition", -- Definition Bindings
+		-- 	d = { "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", "Definition" },
+		-- 	i = { "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", "Implementation" },
+		-- 	c = { "<cmd>lua require('goto-preview').close_all_win()<CR>", "Close Windows" },
+		-- 	r = { "<cmd>lua require('goto-preview').goto_preview_references()<CR>", "Reference" },
 		d = {
-			name = "Definition", -- Definition Bindings
-			d = { "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", "Definition" },
-			i = { "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", "Implementation" },
-			c = { "<cmd>lua require('goto-preview').close_all_win()<CR>", "Close Windows" },
-			r = { "<cmd>lua require('goto-preview').goto_preview_references()<CR>", "Reference" },
+			name = "Dap", -- Dap Bindings
+			b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
+			e = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+			i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+			v = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+			o = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+			r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "REPL" },
+			l = { "<cmd>lua require'dap'.run_last()<cr>", "Run Last" },
+			u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
+			-- u = { "<cmd>lua require'dapui'.open()<cr>", "UI" },
+			t = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
+			m = { "<cmd>lua require'dap-python'.test_method()<cr>", "Test Method" },
+			c = { "<cmd>lua require'dap-python'.test_class()<cr>", "Test Class" },
 		},
-		t = {
+		q = {
 			name = "Diagnostics", -- Diagnostics Bindings
 			d = { ":Trouble document_diagnostics<cr>", "Document Diagnostics" },
 			w = { ":Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
@@ -70,7 +85,7 @@ local mappings = {
 			p = { ":Gitsigns preview_hunk<cr>", "Preview Hunk" },
 			b = { ":Gitsigns blame_line<cr>", "Blame Line" },
 		},
-		r = { "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", "Format" },
+		-- r = { "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", "Format" },
 		c = { "<cmd>Calendar<cr>", "Calendar" },
 		m = { "<cmd>MarkdownPreview<cr>", "Markdown Preview" },
 	},
@@ -85,6 +100,10 @@ local mappings = {
 		j = {
 			name = "Jupyter", -- Jupyter Notebook
 			r = { ":<C-u>MagmaEvaluateVisual<CR>", "Run Selection" },
+		},
+		d = {
+			name = "Dap", -- 
+			s = { "<cmd>lua require'dap-python'.debug_selection()<cr>", "Debug Selection" },
 		},
 	},
 }

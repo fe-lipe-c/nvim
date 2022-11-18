@@ -104,6 +104,16 @@ return packer.startup(function(use)
 		end,
 	})
 	use("karb94/neoscroll.nvim")
+	use('AckslD/swenv.nvim')
+
+	use('mfussenegger/nvim-dap')
+	use('mfussenegger/nvim-dap-python')
+	use("rcarriga/nvim-dap-ui") --,require("mfussenegger/nvim-dap-python").setup({}))
+	use("ravenxrz/DAPInstall.nvim")
+ 	use('theHamsta/nvim-dap-virtual-text')
+	use('nvim-telescope/telescope-dap.nvim')
+
+	use("williamboman/mason.nvim")
 	-- use("wakatime/vim-wakatime")
 	use("windwp/nvim-autopairs")
 	use("OmniSharp/omnisharp-vim")
@@ -132,7 +142,7 @@ return packer.startup(function(use)
 	-- use "lunarvim/colorschemes"          			-- A collection of colorschemes
 	-- use "joshdick/onedark.vim"
 	use("projekt0n/github-nvim-theme")
-	use("/home/felipe/nvim/colorscheme/lipcs") -- a custom color scheme
+	use("/home/felipe/Documents/nvim/colorscheme/lipcs") -- a custom color scheme
 	-- Colorschemes --
 
 	-- LSP --
