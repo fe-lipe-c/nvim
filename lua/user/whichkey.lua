@@ -105,6 +105,11 @@ local mappings = {
 			name = "Dap", -- 
 			s = { "<cmd>lua require'dap-python'.debug_selection()<cr>", "Debug Selection" },
 		},
+		g = {
+			name = "GitSigns", -- Gitsigns Bindings
+			s = { ":Gitsigns stage_hunk<cr>", "Stage Hunk" },
+			u = { ":Gitsigns undo_stage_hunk<cr>", "Undo Stage Hunk" },
+		},
 	},
 }
 
