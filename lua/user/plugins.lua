@@ -80,7 +80,7 @@ return packer.startup(function(use)
 			require("Comment").setup()
 		end,
 	})
-	use({ "lewis6991/gitsigns.nvim", tag = "release" })
+	use({ "lewis6991/gitsigns.nvim"})
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use({
 		"phaazon/hop.nvim",
@@ -98,7 +98,7 @@ return packer.startup(function(use)
 	})
 	use({
 		"akinsho/toggleterm.nvim",
-		tag = "v1.*",
+		tag = "*",
 		config = function()
 			require("toggleterm").setup()
 		end,
@@ -113,8 +113,6 @@ return packer.startup(function(use)
  	use('theHamsta/nvim-dap-virtual-text')
 	use('nvim-telescope/telescope-dap.nvim')
 
-	use("williamboman/mason.nvim")
-	-- use("wakatime/vim-wakatime")
 	use("windwp/nvim-autopairs")
 	use("OmniSharp/omnisharp-vim")
 	use("mattn/calendar-vim")
@@ -142,10 +140,12 @@ return packer.startup(function(use)
 	-- use "lunarvim/colorschemes"          			-- A collection of colorschemes
 	-- use "joshdick/onedark.vim"
 	use("projekt0n/github-nvim-theme")
-	use("/home/felipe/Documents/nvim/colorscheme/lipcs") -- a custom color scheme
+	use("/home/felipe/nvim/colorscheme/lipcs") -- a custom color scheme
 	-- Colorschemes --
 
 	-- LSP --
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	--use {"Maan2003/lsp_lines.nvim",config = function() require("lsp_lines").register_lsp_virtual_lines() end,}
