@@ -80,7 +80,7 @@ return packer.startup(function(use)
 			require("Comment").setup()
 		end,
 	})
-	use({ "lewis6991/gitsigns.nvim"})
+	use({ "lewis6991/gitsigns.nvim" })
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use({
 		"phaazon/hop.nvim",
@@ -104,20 +104,21 @@ return packer.startup(function(use)
 		end,
 	})
 	use("karb94/neoscroll.nvim")
-	use('AckslD/swenv.nvim')
+	use("AckslD/swenv.nvim")
 
-	use('mfussenegger/nvim-dap')
-	use('mfussenegger/nvim-dap-python')
+	use("mfussenegger/nvim-dap")
+	use("mfussenegger/nvim-dap-python")
 	use("rcarriga/nvim-dap-ui") --,require("mfussenegger/nvim-dap-python").setup({}))
 	use("ravenxrz/DAPInstall.nvim")
- 	use('theHamsta/nvim-dap-virtual-text')
-	use('nvim-telescope/telescope-dap.nvim')
+	use("theHamsta/nvim-dap-virtual-text")
+	use("nvim-telescope/telescope-dap.nvim")
 
 	use("windwp/nvim-autopairs")
 	use("OmniSharp/omnisharp-vim")
 	use("mattn/calendar-vim")
 	use("lervag/vimtex")
 	use("wesleimp/stylua.nvim")
+	use("Julian/lean.nvim")
 	-- General --
 
 	-- Snippets --
