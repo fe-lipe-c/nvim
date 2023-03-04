@@ -8,7 +8,7 @@ if not snip_status_ok then
 	return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load()
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
@@ -82,9 +82,9 @@ cmp.setup({
 			"i",
 			"s",
 		}),
-      --   cmp.select_prev_item()
-      -- elseif luasnip.jumpable(-1) then
-        -- luasnip.jump(-1)
+		--   cmp.select_prev_item()
+		-- elseif luasnip.jumpable(-1) then
+		-- luasnip.jump(-1)
 		["<C-Space>"] = cmp.mapping(function(fallback)
 			if luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump()

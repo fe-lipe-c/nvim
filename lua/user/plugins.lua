@@ -1,4 +1,4 @@
-local fn = vim.fn
+fn = vim.fn
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -118,14 +118,8 @@ return packer.startup(function(use)
 	use("mattn/calendar-vim")
 	use("lervag/vimtex")
 	use("wesleimp/stylua.nvim")
-	use("Julian/lean.nvim")
+	-- use("Julian/lean.nvim")
 	-- General --
-
-	-- Snippets --
-	use("L3MON4D3/LuaSnip") -- snippet engine
-	use("fe-lipe-git/friendly-snippets")
-	-- use("rafamadriz/friendly-snippets") -- a bunch of snippets
-	-- Snippets --
 
 	-- cmp plugins --
 	use("hrsh7th/nvim-cmp") -- completion plugin
@@ -136,6 +130,12 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	-- cmp plugins --
+	--
+	-- Snippets --
+	use({ "L3MON4D3/LuaSnip", run = "make install_jsregexp" }) -- snippet engine
+	use("fe-lipe-git/friendly-snippets")
+	-- use("rafamadriz/friendly-snippets") -- a bunch of snippets
+	-- Snippets --
 
 	-- Colorschemes --
 	-- use "lunarvim/colorschemes"          			-- A collection of colorschemes

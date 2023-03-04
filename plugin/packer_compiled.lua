@@ -183,11 +183,6 @@ _G.packer_plugins = {
     path = "/home/felipe/.local/share/nvim/site/pack/packer/start/jupyter-nvim",
     url = "https://github.com/ahmedkhalf/jupyter-nvim"
   },
-  ["lean.nvim"] = {
-    loaded = true,
-    path = "/home/felipe/.local/share/nvim/site/pack/packer/start/lean.nvim",
-    url = "https://github.com/Julian/lean.nvim"
-  },
   lipcs = {
     loaded = true,
     path = "/home/felipe/.local/share/nvim/site/pack/packer/start/lipcs",
@@ -417,10 +412,10 @@ time([[Config for lsp_signature.nvim]], false)
 time([[Config for hop.nvim]], true)
 try_loadstring("\27LJ\2\0021\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bhop\frequire\0", "config", "hop.nvim")
 time([[Config for hop.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\0028\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
+-- Config for: jupyter-nvim
+time([[Config for jupyter-nvim]], true)
+try_loadstring("\27LJ\2\2>\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\17jupyter-nvim\frequire\0", "config", "jupyter-nvim")
+time([[Config for jupyter-nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\0025\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
@@ -429,10 +424,10 @@ time([[Config for Comment.nvim]], false)
 time([[Config for goto-preview]], true)
 try_loadstring("\27LJ\2\2>\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\17goto-preview\frequire\0", "config", "goto-preview")
 time([[Config for goto-preview]], false)
--- Config for: jupyter-nvim
-time([[Config for jupyter-nvim]], true)
-try_loadstring("\27LJ\2\2>\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\17jupyter-nvim\frequire\0", "config", "jupyter-nvim")
-time([[Config for jupyter-nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\0028\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
