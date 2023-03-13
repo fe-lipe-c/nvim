@@ -93,7 +93,7 @@ _G.packer_plugins = {
   ["ai.vim"] = {
     loaded = true,
     path = "/home/felipe/.local/share/nvim/site/pack/packer/start/ai.vim",
-    url = "https://github.com/fe-lipe-git/ai.vim"
+    url = "https://github.com/aduros/ai.vim"
   },
   ["bufferline.nvim"] = {
     loaded = true,

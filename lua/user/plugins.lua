@@ -81,8 +81,8 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- use("aduros/ai.vim")
-	use("fe-lipe-git/ai.vim")
+	use("aduros/ai.vim")
+	-- use("fe-lipe-git/ai.vim")
 	use({ "lewis6991/gitsigns.nvim" })
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use({
