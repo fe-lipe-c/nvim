@@ -65,11 +65,12 @@ return packer.startup(function(use)
 	use("rktjmp/lush.nvim") -- a colorscheme creation aid
 	use("folke/neodev.nvim")
 	use("folke/which-key.nvim")
-	use("vimwiki/vimwiki")
+	-- use("vimwiki/vimwiki")
 	use("preservim/nerdtree")
-	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 	use("rcarriga/nvim-notify")
-	use({ "dccsillag/magma-nvim", run = "UpdateRemotePlugins" }) --, requires = 'rcarriga/nvim-notify' }                -- jupyter notebook
+	-- use({ "dccsillag/magma-nvim", run = "UpdateRemotePlugins" }) --, requires = 'rcarriga/nvim-notify' }                -- jupyter notebook
+	use({ "dccsillag/magma-nvim", commit = "0ab5ef297bf98d69f03bb069533444c14cd53383", run = ":UpdateRemotePlugins" })
 	use("lukas-reineke/indent-blankline.nvim")
 	use("wellle/context.vim")
 	use("github/copilot.vim")
@@ -81,10 +82,10 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use("aduros/ai.vim")
+	-- use("aduros/ai.vim")
 	-- use("fe-lipe-git/ai.vim")
 	use({ "lewis6991/gitsigns.nvim" })
-	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
+	use({ "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true } })
 	use({
 		"phaazon/hop.nvim",
 		config = function()
@@ -109,12 +110,12 @@ return packer.startup(function(use)
 	use("karb94/neoscroll.nvim")
 	use("AckslD/swenv.nvim")
 
-	use("mfussenegger/nvim-dap")
-	use("mfussenegger/nvim-dap-python")
-	use("rcarriga/nvim-dap-ui") --,require("mfussenegger/nvim-dap-python").setup({}))
-	use("ravenxrz/DAPInstall.nvim")
-	use("theHamsta/nvim-dap-virtual-text")
-	use("nvim-telescope/telescope-dap.nvim")
+	-- use("mfussenegger/nvim-dap")
+	-- use("mfussenegger/nvim-dap-python")
+	-- use("rcarriga/nvim-dap-ui") --,require("mfussenegger/nvim-dap-python").setup({}))
+	-- use("ravenxrz/DAPInstall.nvim")
+	-- use("theHamsta/nvim-dap-virtual-text")
+	-- use("nvim-telescope/telescope-dap.nvim")
 
 	use("windwp/nvim-autopairs")
 	use("OmniSharp/omnisharp-vim")
@@ -137,6 +138,7 @@ return packer.startup(function(use)
 	-- Snippets --
 	use({ "L3MON4D3/LuaSnip", run = "make install_jsregexp" }) -- snippet engine
 	use("fe-lipe-git/friendly-snippets")
+	use("vim-skk/eskk.vim")
 	-- use("rafamadriz/friendly-snippets") -- a bunch of snippets
 	-- Snippets --
 
