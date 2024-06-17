@@ -146,7 +146,7 @@ return packer.startup(function(use)
 	-- use "lunarvim/colorschemes"          			-- A collection of colorschemes
 	-- use "joshdick/onedark.vim"
 	use("projekt0n/github-nvim-theme")
-	use("/home/felipe/nvim/colorscheme/lipcs") -- a custom color scheme
+	use("/home/felipe/Documents/nvim/colorscheme/lipcs") -- a custom color scheme
 	-- Colorschemes --
 
 	-- LSP --

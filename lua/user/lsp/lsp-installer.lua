@@ -1,4 +1,4 @@
-require("nvim-lsp-installer").setup({ ensure_installed = { "sumneko_lua" } })
+require("nvim-lsp-installer").setup({ ensure_installed = { "lua_ls" } })
 local lspconfig = require("lspconfig")
 
 local opts = {
@@ -14,7 +14,7 @@ lspconfig.tsserver.setup({ tsserver_opts })
 -- tsserver --
 
 -- sumneko_lua --
-local sumneko_opts = require("user.lsp.settings.sumneko_lua")
+local sumneko_opts = require("user.lsp.settings.lua_ls")
 sumneko_opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
 lspconfig.sumneko_lua.setup({ sumneko_opts })
 -- sumneko_lua --
@@ -38,7 +38,7 @@ marksman_opts = vim.tbl_deep_extend("force", marksman_opts, opts)
 lspconfig.marksman.setup({ marksman_opts })
 -- marksman --
 
-local servers = { "sumneko_lua", "pyright", "tsserver", "marksman" }
+local servers = { "lua_ls", "pyright", "tsserver", "marksman" }
 
 for _, lsp_server in ipairs(servers) do
 	lspconfig[lsp_server].setup({})
